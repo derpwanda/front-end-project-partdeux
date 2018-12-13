@@ -24,8 +24,8 @@ class NotesList extends Component {
 
   generateNotes = (note, index) => {
     return (
-      <Link to={`/note/${note._id}`} className='unstyled_link'>
-        <div className='note' key={note._id}>
+      <Link to={`/note/${note._id}`} className='unstyled_link' key={note.index}>
+        <div className='note'>
           <div>
             <h4>{note.title}</h4>
             <hr></hr>
@@ -38,7 +38,7 @@ class NotesList extends Component {
   }
 
   render() {
-    console.log('props noteslist',this.props)
+    //console.log('props noteslist',this.props)
     return (
       <div className='noteslist_container'>
         <div className="noteslist_header"><h3>Your Notes:</h3></div>
