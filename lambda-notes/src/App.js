@@ -6,8 +6,7 @@ import Main from './components/Main/Main.js'
 class App extends Component {
   render() {
     return (
-      <div>
-        APP PLACEHOLDER
+      <div className='app'>
         <SideNav />
         <Main />
       </div>

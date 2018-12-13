@@ -1,0 +1,8 @@
+.main {
+  display: flex;
+  padding: 1rem;
+  width: 660px;
+  min-width: 660px;
+  height: 110vh;
+  background-color: #F1F1F1;
+}

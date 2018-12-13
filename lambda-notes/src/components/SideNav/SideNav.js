@@ -4,7 +4,7 @@ import './index.css';
 class SideNav extends Component {
   render() {
     return (
-      <div>
+      <div className='sidenav'>
         SIDE NAV
       </div>
     );

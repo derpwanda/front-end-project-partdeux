@@ -4,7 +4,7 @@ import './index.css';
 class Main extends Component {
   render() {
     return (
-      <div>
+      <div className="main">
         MAIN COMPONENT
       </div>
     );
