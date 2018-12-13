@@ -1,0 +1,27 @@
+.delete_modal {
+  z-index: 1000;
+  position: fixed;
+
+  margin-left: -80px;
+  margin-top: 80px;
+
+  /* styling */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 200px;
+  border: 1px solid #424242;
+  box-shadow: 1px 1px 8px black;
+  background-color: white;
+}
+
+.modal_button_container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hidden {
+  display: none;
+}

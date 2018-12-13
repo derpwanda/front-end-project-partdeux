@@ -20,3 +20,20 @@ body {
 .button_link {
   text-decoration: none;
 }
+
+.modal_button {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  background-color: #23bbbe;
+  border: 1px solid #86AEB1;
+  margin: .5rem .5rem;
+  height: 40px;
+}
+
+.modal_button--delete {
+  background-color: red;
+}

@@ -4,10 +4,12 @@
 }
 
 .createNote_title {
+  width: 400px;
   height: 40px;
   padding: 0.25rem 0.75rem;
   margin-bottom: 1rem;
   border: 1px solid #B2B2B2;
+  
 }
 
 .createNote_textBody {

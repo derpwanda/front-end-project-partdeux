@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './index.css';
+import DeleteNote from '../DeleteNote/DeleteNote.js';
 
 class NoteCard extends Component {
   constructor() {
     super()
     this.state = {
+      showDelete: false,
       notesArray: [
         {
           _id: '58pagj4489fh5767n4wga',
@@ -41,6 +43,10 @@ class NoteCard extends Component {
     }
   }
 
+  showModal = () => {
+    this.setState({showDelete: !this.state.showDelete})
+  } //toggle/flip, reverses true/false
+
 
   render() {
     return (
@@ -51,12 +57,19 @@ class NoteCard extends Component {
         </div> 
         <div>
           <a href='#' className='edit_delete'>edit</a>
-          <a href='#' className='edit_delete'>delete</a>
+          <a 
+            href='#' 
+            className='edit_delete'
+            onClick={this.showModal}
+          >delete</a>
         </div>
       </div>
         <div className='notes_list'>
           <p className="">{this.state.notesArray[0].textBody}</p>
         </div>
+        <DeleteNote 
+          toggle={this.state.showDelete}
+          updateParent={this.showModal}/>
       </div>
     );
   }
