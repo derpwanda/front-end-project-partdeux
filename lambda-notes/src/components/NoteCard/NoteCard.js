@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import './index.css';
 import DeleteNote from '../DeleteNote/DeleteNote.js';
+import './index.css';
 
 const mapStateToProps = (state) => {
   return {
@@ -20,11 +20,13 @@ class NoteCard extends Component {
   }
 
   componentWillMount() {
+    console.log('state log', this.state)
     let routeId = this.props.match.params.id;
-    console.log('route id',routeId)
-    let matched = this.props.notesArray.filter((item) => item._id === routeId)
-    console.log('Matched', matched)
+    console.log('route id',typeof routeId)
+    let matched = this.props.notesArray.filter((item) => item._id === Number(routeId));
+    //console.log('Matched', matched)
     this.setState({matched})
+    //console.log('state log 2', this.state)
   }
 
   showModal = () => {
@@ -34,6 +36,7 @@ class NoteCard extends Component {
 
   render() {
     console.log('noteview', this.props)
+    console.log('state log render', this.state)
     return (
       <div className='noteCard_container'>
       <div className='noteCard_topContent'>

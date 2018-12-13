@@ -17,16 +17,16 @@ class CreateNote extends Component {
   handleSave = () => {
     console.log('Note',this.state.note);
     let newNote = {...this.state.note};
-    newNote['_id'] = Date.now() + newNote.title;
+    newNote['_id'] = Date.now();
     newNote.createdAt = Date.now();
-    this.props.createNote(this.state.note);
+    this.props.createNote(newNote);
     this.props.history.push('/')
   }
 
   handleChange = (event) => {
     let temp = {...this.state.note}
-    temp[event.target.name]= event.target.value
-    this.setState({note:temp});
+    temp[event.target.name] = event.target.value
+    this.setState({ note: temp });
   }
 
   render() {
