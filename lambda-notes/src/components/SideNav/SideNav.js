@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './index.css';
 
 class SideNav extends Component {
@@ -10,14 +11,13 @@ class SideNav extends Component {
         </div>
 
         <div className='nav_buttons_container'>
-          <a href='#' className='button_link'>
+          <Link to='/' className='button_link'>
           <div className="nav_button">View Your Notes</div>
-          </a>
+          </Link>
 
-          <a href='#' className='button_link'>
+          <Link to='/create' className='button_link'>
           <div className="nav_button">+ Create New Note</div>
-          </a>
-          
+          </Link>
         </div>
       </div>
     );

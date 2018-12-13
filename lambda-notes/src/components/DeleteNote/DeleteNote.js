@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
+import {deleteNote} from '../../actions'
+import {connect} from 'react-redux';
 import './index.css';
 
 class DeleteNote extends Component {
-  constructor(){
-    super();
-    this.state={
 
-    }
-  }
-  componentWillMount() {
-
+  deleteHandler = () => {
+    this.props.deleteNote(this.props.toDelete);
+    this.props.history.push('/') //takes us back to the homepage; initalized in NoteCard
   }
 
   render() {
+    console.log('delete note props', this.props)
+
     let toggle = this.props.toggle;
     return (
       <div className={ toggle ? 'delete_modal' : 'hidden'}>
@@ -22,7 +22,7 @@ class DeleteNote extends Component {
         <div className='modal_button_container'>
           <div 
             className='modal_button modal_button--delete'
-            onClick={this.props.updateParent}
+            onClick={this.deleteHandler}
             >Delete</div>
           <div 
             className='modal_button'
@@ -34,4 +34,4 @@ class DeleteNote extends Component {
   }
 }
 
-export default DeleteNote;
+export default connect(null,{deleteNote})(DeleteNote);

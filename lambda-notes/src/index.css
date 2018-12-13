@@ -21,6 +21,16 @@ body {
   text-decoration: none;
 }
 
+.unstyled_link {
+  text-decoration: none;
+  color: #424242;
+}
+
+.unstyled_link :visited{
+  text-decoration: none;
+  color: #424242;
+}
+
 .modal_button {
   width: 200px;
   display: flex;
