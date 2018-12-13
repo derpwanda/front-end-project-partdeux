@@ -20,10 +20,10 @@ class NoteCard extends Component {
   }
 
   componentWillMount() {
-    console.log('state log', this.state)
+    //console.log('state log', this.state)
     let routeId = this.props.match.params.id;
-    console.log('route id',typeof routeId)
-    let matched = this.props.notesArray.filter((item) => item._id === Number(routeId));
+    //console.log('route id',typeof routeId)
+    let matched = this.props.notesArray.filter((item) => item._id === Number(routeId))
     //console.log('Matched', matched)
     this.setState({matched})
     //console.log('state log 2', this.state)
@@ -35,8 +35,8 @@ class NoteCard extends Component {
 
 
   render() {
-    console.log('noteview', this.props)
-    console.log('state log render', this.state)
+    //console.log('noteview', this.props)
+    //console.log('state log render', this.state)
     return (
       <div className='noteCard_container'>
       <div className='noteCard_topContent'>
