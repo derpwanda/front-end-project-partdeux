@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   /* border: 1px dotted darkred; */
+  font-family: 'Open Sans','Helvetica Neue', sans-serif;
 }
 
 body {
@@ -14,4 +15,8 @@ body {
   display: flex;
   justify-content: center;
   min-width: 900px;
+}
+
+.button_link {
+  text-decoration: none;
 }

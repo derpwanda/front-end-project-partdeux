@@ -10,8 +10,14 @@ class SideNav extends Component {
         </div>
 
         <div className='nav_buttons_container'>
+          <a href='#' className='button_link'>
           <div className="nav_button">View Your Notes</div>
+          </a>
+
+          <a href='#' className='button_link'>
           <div className="nav_button">+ Create New Note</div>
+          </a>
+          
         </div>
       </div>
     );
