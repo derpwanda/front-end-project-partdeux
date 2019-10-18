@@ -3,6 +3,12 @@ import { connect } from 'react-redux';
 import './index.css';
 import { editNote } from '../../actions';
 
+// I am proud of writing this component and getting it working.
+// I'd previously failed this project because of confusion on how
+// state/props worked in React and Redux. Learning how to follow patterns
+// and the importance of debugging was a major accomplishment for me and
+// helped me realize that there was a chance for me in the tech industry.
+
 const mapStateToProps = (state) => {
   return {
     notesArray: state
